@@ -1,0 +1,359 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #35567d; /* Darker, richer slate blue */
+    --secondary-color: #eef2f6; /* Slightly darker soft hero background */
+    --accent-color: #e09f87; /* Soft pastel peach/coral */
+    --text-color: #4a5568; /* Slightly darker text for readability */
+    --white: #ffffff;
+}
+
+/* Base font size - scaled down to 14px to make everything globally smaller */
+html {
+    font-size: 14px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.3; 
+    background-color: #e2e8f0; /* Darker background so the white cards pop */
+    font-weight: 400;
+    font-size: 0.95rem; 
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 30px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Slightly darker shadow for more pop */
+    margin-bottom: 30px;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; 
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 1.3rem; 
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 0.75rem; 
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--secondary-color);
+    padding: 40px 0 50px 0; 
+    margin-bottom: 30px;
+}
+
+.hero-main-heading {
+    text-align: center;
+    font-size: 1.5rem; 
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* The wrapper div for JUST the text and image */
+.hero-content {
+    display: flex;
+    flex-direction: row; /* Strictly enforces horizontal layout */
+    align-items: center;
+    justify-content: center; 
+    max-width: 850px; /* Contains the group nicely */
+    margin: 0 auto; 
+    gap: 40px; 
+}
+
+.hero-text {
+    flex: 1 1 auto; 
+    max-width: 500px; 
+    text-align: left; 
+}
+
+.pitch {
+    font-size: 0.95rem; 
+    margin-bottom: 0; 
+    font-weight: 400; 
+}
+
+.hero-image {
+    flex: 0 0 auto; 
+    width: 180px; 
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 180px; 
+    border-radius: 12px; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.hero-cta-container {
+    text-align: center;
+    margin-top: 40px; 
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 10px 22px; 
+    border-radius: 30px; 
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #d18d73; 
+    transform: translateY(-2px);
+}
+
+/* --- Services & About Sections --- */
+.services-section h3, .about-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px; 
+    border-bottom: 1px solid #e2e8f0; 
+    padding-bottom: 8px;
+    font-size: 1.1rem; 
+    font-weight: 600;
+}
+
+.services-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+}
+
+.services-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.85rem; 
+}
+
+.services-list li::before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+}
+
+.services-list strong {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Updated About Content */
+.about-content {
+    display: flex;
+    gap: 25px; 
+    align-items: center; 
+}
+
+.about-image {
+    flex: 0 0 auto; 
+    width: 80px; 
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 80px; 
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    display: block;
+}
+
+.about-text {
+    flex: 1; 
+}
+
+.about-text p {
+    margin-bottom: 12px; 
+    font-size: 0.85rem; 
+    font-weight: 400;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: #8fa8c8; /* Restored to the original dusty blue */
+    color: var(--white);
+    text-align: center;
+    padding: 40px 20px; 
+}
+
+.contact-section h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.2rem; 
+}
+
+.contact-section p {
+    font-weight: 400;
+    font-size: 0.9rem; 
+}
+
+.contact-info {
+    margin-top: 15px;
+    font-size: 0.95rem; 
+}
+
+.contact-info a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--text-color); /* Anchors the bottom with the dark text color */
+    color: #ffffff; 
+    text-align: center;
+    padding: 30px 20px; 
+    font-size: 0.8rem; 
+    font-weight: 400;
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #ffffff; 
+    font-size: 1.1rem; 
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color); /* Switched hover back to accent color for better pop on dark gray */
+}
+
+/* =========================================
+   Responsive Design Breakpoints
+   ========================================= */
+
+/* Tablet (iPad Landscape & Portrait) - 1024px and below */
+@media (max-width: 1024px) {
+    html {
+        font-size: 13px; 
+    }
+    
+    .about-content {
+        gap: 20px;
+    }
+}
+
+/* Large Mobile / iPad Portrait (768px and below) */
+@media (max-width: 768px) {
+    html {
+        font-size: 12px; 
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        padding: 30px 0;
+    }
+
+    .hero-cta-container {
+        margin-top: 30px; 
+    }
+
+    .services-list {
+        grid-template-columns: 1fr; 
+    }
+    
+    .card {
+        padding: 20px 15px; 
+    }
+}
+
+/* Small Mobile (Narrowest phones) - 400px and below */
+@media (max-width: 400px) {
+    html {
+        font-size: 11px; 
+    }
+
+    /* Hero section stacks vertically for narrow mobile phones */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%; 
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .about-content {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .about-image {
+        flex: auto; 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .about-text {
+        text-align: left; 
+    }
+}
