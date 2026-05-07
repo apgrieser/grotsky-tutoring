@@ -113,7 +113,7 @@ nav a:hover {
 }
 
 .pitch {
-    font-size: 1rem; 
+    font-size: 1.18rem; 
     margin-bottom: 0; 
     font-weight: 500; 
 }
@@ -228,21 +228,42 @@ nav a:hover {
 
 /* --- Contact Section --- */
 .contact-section {
+    position: relative; /* Crucial for absolute positioning of children */
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
-    padding: 40px 20px; 
+    padding: 40px 20px 80px 20px; /* Added extra bottom padding to make room for the owl */
+    overflow: hidden; /* <--- NEW: Crucial to crop the image "cookie-cutter" style */
+}
+
+.peeking-owl {
+    position: absolute; 
+    bottom: -40px; /* <--- NEW: Push image down so bottom half is cut off */
+    right: -30px; /* <--- NEW: Slightly offset right to hug the corner like the card */
+    max-width: 160px; /* <--- INCREASED size slightly for better visibility since half is hidden */
+    z-index: 1; /* NEW: Lower z-index so text stays clearly on top if they overlap */
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.7)); /* Glow effect */
+    transform: rotate(5deg); /* Optional: Slight extra rotation to enhance the peek */
 }
 
 .contact-section h2 {
+    position: relative; /* Ensure text is above absolute image */
+    z-index: 5;
     margin-bottom: 10px;
     font-size: 1.5rem; 
     color: var(--white);
 }
 
 .contact-section p {
+    position: relative; /* Ensure text is above absolute image */
+    z-index: 5;
     font-weight: 500;
     font-size: 0.95rem; 
+}
+
+.contact-form-container {
+    position: relative; /* Ensure form is above absolute image */
+    z-index: 5;
 }
 
 .contact-info {
@@ -305,6 +326,12 @@ footer {
     .hero-cta-container { margin-top: 30px; }
     .services-list { grid-template-columns: 1fr; }
     .card { padding: 20px 15px; }
+
+    /* NEW: Peeking Owl mobile adjustments */
+    .peeking-owl {
+        max-width: 90px; 
+        bottom: -25px; 
+        right: -10px;
 }
 
 @media (max-width: 400px) {
@@ -330,4 +357,10 @@ footer {
         margin-bottom: 10px;
     }
     .about-text { text-align: left; }
+
+    /* Shrink the owl even MORE for tiny screens */
+    .peeking-owl {
+        max-width: 70px; 
+        bottom: -25px; /* Adjusting the bottom so he still peeks proportionally */
+    }
 }
