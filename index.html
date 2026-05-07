@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savvy Owl Scholars | K-8 Educational Support</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -30,7 +32,7 @@
                     <p class="pitch">Unlike the massive, one-size-fits-all tutoring corporations, I provide individualized attention tailored to how your child learns best. No standardized scripts—just genuine, experienced teaching.</p>
                 </div>
                 <div class="hero-image">
-                    <img src="images/student.jpg" alt="Student studying at desk" onerror="this.src='https://via.placeholder.com/400x300?text=Student+Image'">
+                    <img src="images/savvyowlimage.png" alt="Savvy Owl Scholars Logo" onerror="this.src='https://via.placeholder.com/400x300?text=Savvy+Owl'">
                 </div>
             </div>
             
@@ -56,13 +58,13 @@
 
     <section id="about" class="about-section container">
         <div class="card">
-            <h3>About</h3>
+            <h3>About Lori</h3>
             <div class="about-content">
                 <div class="about-image">
                     <img src="images/tutor.jpg" alt="Lori Grotsky, Tutor" onerror="this.src='https://via.placeholder.com/400x400?text=Lori+Grotsky'">
                 </div>
                 <div class="about-text">
-                    <p>High, I'm Lori!  With over 20 years of experience as a public school teacher, I understand the curriculum expectations and the diverse ways children process information. I have a Master's in Elementary Education and a passion for helping students experience that "lightbulb" moment.</p>
+                    <p>Hi, I'm Lori! With over 20 years of experience as a public school teacher, I understand the curriculum expectations and the diverse ways children process information. I have a Master's in Elementary Education and a passion for helping students experience that "lightbulb" moment.</p>
                     <p>My goal is to build confidence alongside competence, providing a safe, encouraging environment where mistakes are just steps toward learning.</p>
                 </div>
             </div>
@@ -72,33 +74,30 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Ready to Get Started?</h2>
-            <p>Contact me to discuss your child's unique needs or fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4vA7MyWvgu3ABbucE57RTUG25VX7VPtJIL9ZPlEIUz_dWqQ/viewform?usp=publish-editor" target="_blank" style="color: white; text-decoration: underline;">registration form</a>.</p>
-            <div class="contact-form-container" style="max-width: 500px; margin: 0 auto; text-align: left;">
+            <p>Contact me to discuss your child's unique needs.</p>
+                 <!-- or fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4vA7MyWvgu3ABbucE57RTUG25VX7VPtJIL9ZPlEIUz_dWqQ/viewform?usp=publish-editor" target="_blank" style="color: white; text-decoration: underline;">registration form</a>.</p> -->
+            <div class="contact-form-container" style="max-width: 500px; margin: 0 auto; text-align: left; margin-top: 20px;">
                 <form action="https://formsubmit.co/info@savvyowlscholars.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://savvyowlscholars.com">
             
                     <div style="margin-bottom: 15px;">
-                        <label for="name" style="display: block; margin-bottom: 5px;">Your Name:</label>
-                        <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                        <label for="name" style="display: block; margin-bottom: 5px; color: white;">Your Name:</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
                     </div>
             
                     <div style="margin-bottom: 15px;">
-                        <label for="email" style="display: block; margin-bottom: 5px;">Email Address:</label>
-                        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; color: white;">Email Address:</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
                     </div>
             
                     <div style="margin-bottom: 15px;">
-                        <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
-                        <textarea name="message" rows="4" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                        <label for="message" style="display: block; margin-bottom: 5px; color: white;">Message:</label>
+                        <textarea name="message" rows="4" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;"></textarea>
                     </div>
             
-                    <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+                    <button type="submit" class="cta-button form-submit-btn" style="width: 100%; border: none; cursor: pointer; border: 2px solid white;">Send Message</button>
                 </form>
-            </div>
-            <div class="contact-info">
-                <!-- <p><strong>Email:</strong> <a href="mailto:info@savvyowlscholars.com">info@savvyowlscholars.com</a></p> -->
-                <!-- <p><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p> -->
             </div>
         </div>
     </section>
